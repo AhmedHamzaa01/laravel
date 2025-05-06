@@ -14,7 +14,7 @@ phases:
     commands:
       - echo "Running Laravel setup steps..."
       - ls -la
-      - sudo php artisan key:generate || true
+      - php artisan key:generate || true
       - cat .env
 
   build:
