@@ -15,8 +15,7 @@ phases:
       - echo "Running Laravel setup steps..."
       - ls -la
       - php artisan key:generate || true
-      - php artisan optimize
-      - php artisan cache:clear
+      - php artisan optimize:clear
       - php composer.phar dump-autoload
       - cat .env
 
