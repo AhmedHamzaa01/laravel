@@ -17,6 +17,7 @@ phases:
       - php artisan key:generate || true
       - php artisan optimize
       - php composer.phar dump-autoload
+      - php artisan config:cache
       - cat .env
 
   build:
