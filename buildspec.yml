@@ -13,8 +13,9 @@ phases:
   pre_build:
     commands:
       - echo "Running Laravel setup steps..."
-      - cp .env.example .env || true
-      - php artisan key:generate || true
+      - ls -la
+      - sudo php artisan key:generate || true
+      - cat .env
 
   build:
     commands:
