@@ -10,13 +10,11 @@ phases:
       - chmod -R 755 .
       - chmod -R 777 storage bootstrap/cache
 
- pre_build:
+  pre_build:
     commands:
-      - echo "Running Laravel pre-build steps..."
-      - cp .env.example .env
-      - php artisan key:generate
-      - php artisan config:clear
-      - php artisan config:cache
+      - echo "Running Laravel setup steps..."
+      - cp .env.example .env || true
+      - php artisan key:generate || true
 
   build:
     commands:
