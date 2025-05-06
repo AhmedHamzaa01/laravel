@@ -13,12 +13,12 @@ phases:
   pre_build:
     commands:
       - echo "Running Laravel setup steps..."
+      - cp .env.example .env
       - ls -la
       - php artisan key:generate || true
       - php artisan optimize
       - php composer.phar dump-autoload
       - php artisan config:cache
-      - cat .env
 
   build:
     commands:
